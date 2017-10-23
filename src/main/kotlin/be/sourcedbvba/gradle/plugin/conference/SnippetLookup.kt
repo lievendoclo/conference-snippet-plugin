@@ -2,7 +2,7 @@ package be.sourcedbvba.gradle.plugin.conference
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
-import com.moandjiezana.toml.Toml
+import be.sourcedbvba.shading.com.moandjiezana.toml.Toml
 
 class SnippetLookup {
     companion object {
