@@ -1,0 +1,19 @@
+<idea-plugin url="https://github.com/woru/options-completion-phpstorm-plugin">
+    <id>be.sourcedbvba.gradle.plugin.conference-snippet-plugin</id>
+    <name>Conference snippet plugin</name>
+    <version>1.0</version>
+    <vendor email="lieven@sourced-bvba.be" url="https://www.sourced-bvba.be">Lieven Doclo</vendor>
+
+    <description>Conference snippet completion plugin</description>
+
+    <change-notes>
+    </change-notes>
+
+    <idea-version since-build="107.105"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <completion.contributor language="any" implementationClass="be.sourcedbvba.gradle.plugin.conference.SnippetCompletionContributor"/>
+    </extensions>
+
+    <depends>com.intellij.modules.platform</depends>
+</idea-plugin>
