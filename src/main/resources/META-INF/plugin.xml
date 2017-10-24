@@ -1,12 +1,15 @@
-<idea-plugin url="https://github.com/woru/options-completion-phpstorm-plugin">
+<idea-plugin url="https://bitbucket.org/doclolieven/conference-snippet-plugin">
     <id>be.sourcedbvba.gradle.plugin.conference-snippet-plugin</id>
     <name>Conference snippet plugin</name>
     <version>1.0</version>
     <vendor email="lieven@sourced-bvba.be" url="https://www.sourced-bvba.be">Lieven Doclo</vendor>
 
-    <description>Conference snippet completion plugin</description>
+    <description>Conference snippet completion plugin. Use a .snippet.toml file in your root project path
+    to add on demand code snippets to your autocomplete menu in order to have easy disposable autocomplete
+    options. Perfect for live coding demos at conferences.</description>
 
     <change-notes>
+        1.0.0: Initial version
     </change-notes>
 
     <idea-version since-build="107.105"/>

@@ -4,14 +4,16 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
 import be.sourcedbvba.shading.com.moandjiezana.toml.Toml
 
-class SnippetLookup {
-    companion object {
-        private val toml = Toml()
-        private var currentSnippets: Map<String, Any> = mapOf()
-        private var modificationStamp: Long = -1
-    }
+interface SnippetLookup {
+    fun getSnippets(project: Project): List<Snippet>
+}
 
-    fun getSnippets(project: Project): List<Snippet> {
+class TomlSnippetLookup : SnippetLookup {
+    private val toml = Toml()
+    private var currentSnippets: Map<String, Any> = mapOf()
+    private var modificationStamp: Long = -1
+
+    override fun getSnippets(project: Project): List<Snippet> {
         val snippetFile = getSnippetFile(project)
         if(snippetFile != null) {
             if (fileHasChanged(snippetFile)) {

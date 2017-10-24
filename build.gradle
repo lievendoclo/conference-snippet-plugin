@@ -20,6 +20,7 @@ targetCompatibility = javaVersion
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 intellij {
@@ -35,6 +36,13 @@ idea {
         languageLevel = javaVersion
         vcs = 'Git'
     }
+}
+
+dependencies {
+    testCompile "io.damo.aspen:aspen:2.1.0"
+    testCompile "org.assertj:assertj-core:3.8.0"
+    testCompile "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
+
 }
 
 
