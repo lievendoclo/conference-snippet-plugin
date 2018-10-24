@@ -3,3 +3,7 @@ build
 .idea
 .gradle
 *.iml
+.settings
+.classpath
+.project
+bin
